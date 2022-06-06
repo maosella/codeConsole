@@ -1,0 +1,25 @@
+*/ codigo para consola aws ejemplo /* https://docs.aws.amazon.com/es_es/cli/latest/userguide/getting-started-quickstart.html
+
+
+
+// crear un bucket
+
+  aws s3 mb s3://mybucketusuario1 --profile usuario1
+
+// copiar de bucket a bucket ejemplo (primer bucket es publico)
+
+  aws s3 cp s3://kat-tame-bda-immersion s3://mybucketusuario1 --profile usuario1 --recursive
+
+// copiar desde el escritorio a s3
+
+  aws s3 cp /Users/martinosella/desktop/WebPage s3://mybucketusuario2 --profile usuario1 --recursive
+
+// conectarse por ssh a Amazon linux 2 (desde donde se encuentras las llaves ssh)
+
+  sudo chmod 400 /Users/martinosella/Downloads/llavesdeminuevainstancia-pem
+
+  ssh -i ./llavesdeminuevainstancia.pem ec2-user@54.158.230.186
+
+
+
+
